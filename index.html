@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>dsCountDown | Easy and customizable count down plugin for jQuery</title>
+		
+		<link rel='stylesheet' href='style.css' type='text/css' media='all' />
+		
+		<link rel='stylesheet' href='dscountdown.css' type='text/css' media='all' />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="dscountdown.js"></script> -->
+		<script type="text/javascript" src="dscountdown.min.js"></script>
+		
+		<script>
+			jQuery(document).ready(function($){
+				
+				$('.demo1').dsCountDown({
+					endDate: new Date("December 13, 2013 11:13:00")
+				});
+				
+				$('.demo2').dsCountDown({
+					endDate: new Date("January 13, 2014 11:23:00"),
+					theme: 'black'
+				});
+				
+				$('.demo3').dsCountDown({
+					endDate: new Date("February 13, 2014 11:33:00"),
+					theme: 'red'
+				});
+				
+				$('.demo4').dsCountDown({
+					endDate: new Date("March 13, 2014 11:43:00"),
+					theme: 'flat'
+				});
+				
+				$('.demo5').dsCountDown({
+					endDate: new Date("April 13, 2014 11:53:00"),
+					theme: 'custome'
+				});
+				
+				$('.demo6').dsCountDown({
+					endDate: new Date("May 13, 2014 11:53:00"),
+					titleDays: 'Hari',
+					titleHours: 'Jam',
+					titleMinutes: 'Menit',
+					titleSeconds: 'Detik'
+				});
+				
+				$('.demo7').dsCountDown({
+					startDate: new Date("November 12, 2013 08:26:41"), // this value is picked up by PHP script &lt;?php echo date('F d, Y h:i:s'); ?&gt;
+					endDate: new Date("June 13, 2014 11:53:00")
+				});
+				
+			});
+		</script>
+	</head>
+	<body id="ds-body">
+		<div class="wrapper">
+		<h1>dsCountDown</h1>
+				
+		<p>Easy and customizable count down plugin for jQuery.<p>
+		
+		<p>Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License.</a><br/>
+		Compatible with: jQuery 1.2.3+ in Firefox, Safari, Chrome, Opera, Internet Explorer 7+</p>
+		
+		<p>
+		<strong>Features:</strong>
+			<ul>
+				<li>Easy to use</li>
+				<li>Customizable</li>
+				<li>Lot of theme options</li>
+				<li>Be able to load multiple time on one page</li>
+				<li>Be able to use server time</li>
+			</ul>
+		</p>
+		
+		<h2>Demo</h2>
+		
+		<ul>
+			<li>		
+				<h3>Themes</h3>
+				<ul>
+					<li>
+						<h4>Default Theme</h4>
+						<br/>
+						<div class="demo1"></div>
+						<br/>
+						<strong>HTML</strong>
+						<br/>
+						<pre class="code">
+&lt;div class=&quot;demo1&quot;&gt;&lt;/div&gt;						</pre>
+						<br/>
+						<strong>Javascript</strong>
+						<br/>
+						<pre class="code">
+$('.demo1').dsCountDown({
+   endDate: new Date("December 13, 2013 11:13:00"),
+});						</pre>
+						<br/>
+						<br/>
+					</li>
+					<li>
+						<h4>Black Theme</h4>
+						<div class="demo2"></div>
+						<br/>
+						<strong>HTML</strong>
+						<br/>
+						<pre class="code">
+&lt;div class=&quot;demo2&quot;&gt;&lt;/div&gt;						</pre>
+						<br/>
+						<strong>Code</strong>
+						<br/>
+						<pre class="code">
+$('.demo2').dsCountDown({
+   endDate: new Date("January 13, 2014 11:23:00"),
+   theme: 'black'
+});						</pre>
+						<br/>
+						<br/>
+					</li>
+					<li>
+						<h4>Red Theme</h4>
+						<div class="demo3"></div>
+						<br/>
+						<strong>HTML</strong>
+						<br/>
+						<pre class="code">
+&lt;div class=&quot;demo3&quot;&gt;&lt;/div&gt;						</pre>
+						<br/>
+						<strong>Code</strong>
+						<br/>
+						<pre class="code">
+$('.demo3').dsCountDown({
+   endDate: new Date("February 13, 2014 11:33:00"),
+   theme: 'red'
+});						</pre>
+						<br/>
+						<br/>
+					</li>
+					<li>
+						<h4>Flat Theme</h4>
+						<div class="demo4"></div>
+						<br/>
+						<strong>HTML</strong>
+						<br/>
+						<pre class="code">
+&lt;div class=&quot;demo4&quot;&gt;&lt;/div&gt;						</pre>
+						<br/>
+						<strong>Code</strong>
+						<br/>
+						<pre class="code">
+$('.demo4').dsCountDown({
+   endDate: new Date("March 13, 2014 11:43:00"),
+   theme: 'flat'
+});						</pre>
+						<br/>
+						<br/>
+					</li>
+					<li>
+						<h4>Custom Theme (Not Styled)</h4>
+						<div class="demo5"></div>
+						<br/>
+						<strong>HTML</strong>
+						<br/>
+						<pre class="code">
+&lt;div class=&quot;demo5&quot;&gt;&lt;/div&gt;						</pre>
+						<br/>
+						<strong>Code</strong>
+						<br/>
+						<pre class="code">
+$('.demo5').dsCountDown({
+   endDate: new Date("April 13, 2014 11:53:00"),
+   theme: 'custome'
+});						</pre>
+						<br/>
+						<br/>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Language</h3>
+						<br/>
+				<div class="demo6"></div>
+				<br/>
+				<p>Uses Bahasa Indonesia.</p>
+				<br/>
+				<strong>HTML</strong>
+				<br/>
+				<pre class="code">
+&lt;div class=&quot;demo6&quot;&gt;&lt;/div&gt;				</pre>
+				<br/>
+				<strong>Code</strong>
+				<br/>
+				<pre class="code">
+$('.demo6').dsCountDown({
+	endDate: new Date("May 13, 2014 11:53:00"),
+	titleDays: 'Hari',
+	titleHours: 'Jam',
+	titleMinutes: 'Menit',
+	titleSeconds: 'Detik',
+});				</pre>
+						<br/>
+						<br/>
+			</li>
+			<li>
+				<h3>Server Time (PHP Script)</h3>
+						<br/>				
+				<p>Use server time for the count down, don't care about client time.</p>
+				<div class="demo7"></div>
+				<br/>
+				<br/>
+				<strong>HTML</strong>
+				<br/>
+				<pre class="code">
+&lt;div class=&quot;demo7&quot;&gt;&lt;/div&gt;				</pre>
+				<strong>Code</strong>
+				<br/>
+				<pre class="code">
+$('.demo7').dsCountDown({
+	startDate: new Date("&lt;?php echo date('F d, Y h:i:s'); ?&gt;"),
+	endDate: new Date("June 13, 2014 11:53:00")
+});				</pre>
+						<br/>
+						<br/>
+			</li>
+		</ul>
+		<h2>How To Use</h2>
+		<br/>
+		<ol>
+			<li>
+				<span>Import jQuery library</span>
+				<pre class="code">
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js&quot;&gt;&lt;/script&gt;				</pre>
+		<br/>
+			</li>
+			<li>
+				<span>Import dsCountDown CSS file</span>
+		<br/>
+				<pre class="code">
+&lt;link rel=&#39;stylesheet&#39; href=&#39;css/dscountdown.css&#39; type=&#39;text/css&#39; media=&#39;all&#39; /&gt;				</pre>
+		<br/>
+			</li>
+			<li>
+				<span>Import dsCountDown Javascript file</span>
+		<br/>
+				<pre class="code">
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/dscountdown.js&quot;&gt;&lt;/script&gt;				</pre>
+		<br/>
+			</li>
+			<li>
+				<span>Add HTML Element</span>
+		<br/>
+				<pre class="code">
+&lt;div class=&quot;demo&quot;&gt;&lt;/div&gt;				</pre>
+		<br/>
+			</li>
+			<li>
+				<span>Add Javascript Script</span>
+		<br/>
+				<pre class="code">
+&lt;script&gt;
+	jQuery(document).ready(function($){
+		
+		$('.demo').dsCountDown({
+			endDate: new Date("December 13, 2013 11:13:00")
+		});
+		
+	});
+&lt;/script&gt;				</pre>
+		<br/>
+			</li>
+		</ol>
+		
+		<h2>Options</h2>
+		<br/>		
+				<ul>
+					<li>startDate: new Date(),		Date Object of starting time of count down, usualy now (whether client time or given php time)</li>
+					<li>endDate: null,				 Date Object of ends of count down</li>
+					
+					<li>elemSelDays: '',			 Leave blank to use default value or provide a string selector if the lement already exist, Example: .ds-days</li>
+					<li>elemSelHours: '', 			 Leave blank to use default value or provide a string selector if the lement already exist, Example: .ds-hours</li>
+					<li>elemSelMinutes: '',			 Leave blank to use default value or provide a string selector if the lement already exist, Example: .ds-minutes</li>
+					<li>elemSelSeconds: '',			 Leave blank to use default value or provide a string selector if the lement already exist, Example: .ds-seconds</li>
+					
+					<li>theme: 'white',				 Set the theme 'white', 'black', 'red', 'flat', 'custome'</li>
+					
+					<li>titleDays: 'Days',			 Set the title of days</li>
+					<li>titleHours: 'Hours',		 Set the title of hours</li>
+					<li>titleMinutes: 'Minutes',	 Set the title of minutes</li>
+					<li>titleSeconds: 'Seconds',	 Set the title of seconds</li>
+				</ul>
+		<br/>
+		
+		<h2>Events</h2>
+		<br/>
+				<ul>
+					<li>onBevoreStart: null,		 callback before the count down starts</li>
+					<li>onClocking: null,			 callback after the timer just clocked</li>
+					<li>onFinish: null				 callback once the count down finish or 0 timer defined</li>
+				</ul>
+		<br/>
+		<h2>Contact</h2>
+		<p>By I Wayan Wirka<br/>I welcome email at wirka@duststone.com, but I'm afraid I don't have time to answer personal requests for help regarding my plugins. Thanks!</p>
+		</div>
+	</body>
+</html>
